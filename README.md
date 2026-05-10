@@ -14,8 +14,10 @@ Na primeira inicializacao, o container executa os scripts em `docker/mysql/init`
 
 O `web_mmp` deve usar:
 
-- `DB_HOST=host.docker.internal`
+- `DB_HOST=db_mmp`
 - `DB_PORT=3306`
 - `DB_NAME=db_mmp`
 - `DB_USER=app_mmp`
 - `DB_PASS=app_mmp`
+
+Quando os tres projetos forem iniciados pelo `docker-compose.yml` da raiz, eles compartilham a mesma rede interna automaticamente.
