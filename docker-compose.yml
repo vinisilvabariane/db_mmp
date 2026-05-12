@@ -16,6 +16,12 @@ services:
       timeout: 5s
       retries: 10
       start_period: 20s
+    networks:
+      - mmp-net
 
 volumes:
   mysql_data:
+
+networks:
+  mmp-net:
+    external: true
